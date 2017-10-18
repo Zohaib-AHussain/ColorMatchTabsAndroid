@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.PorterDuff
+import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.support.v7.app.ActionBar
@@ -115,8 +116,8 @@ class ColorTabView : LinearLayout, View.OnClickListener {
                 alpha = 0f
                 text = colorTab?.text
                 setTextColor(getColor(android.R.color.white))
-                textSize = getDimen(R.dimen.tab_textSize).toFloat()
-
+                textSize = 14f
+                typeface = Typeface.createFromAsset(context.assets, "Gotham-Bold.otf")
                 animatePlayButton()
             }
         } else {
