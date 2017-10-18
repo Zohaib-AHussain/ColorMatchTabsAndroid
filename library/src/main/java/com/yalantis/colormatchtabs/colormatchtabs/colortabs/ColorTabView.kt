@@ -114,7 +114,9 @@ class ColorTabView : LinearLayout, View.OnClickListener {
                 visibility = View.VISIBLE
                 alpha = 0f
                 text = colorTab?.text
-                setTextColor(getBackgroundColor())
+                setTextColor(getColor(android.R.color.white))
+                textSize = getDimen(R.dimen.tab_textSize).toFloat()
+
                 animatePlayButton()
             }
         } else {
@@ -122,7 +124,7 @@ class ColorTabView : LinearLayout, View.OnClickListener {
         }
         if (colorTab?.icon != null) {
             iconView.setImageDrawable(colorTab.icon)
-            reColorDrawable(colorTab.isSelected)
+            //reColorDrawable(colorTab.isSelected)
             iconView.requestLayout()
         }
         requestLayout()
