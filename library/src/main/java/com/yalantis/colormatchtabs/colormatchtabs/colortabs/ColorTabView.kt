@@ -116,7 +116,7 @@ class ColorTabView : LinearLayout, View.OnClickListener {
                 alpha = 0f
                 text = colorTab?.text
                 setTextColor(getColor(android.R.color.white))
-                textSize = 14f
+                textSize = 12f
                 typeface = Typeface.createFromAsset(context.assets, "Gotham-Bold.otf")
                 animatePlayButton()
             }
